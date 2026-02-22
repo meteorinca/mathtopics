@@ -17,7 +17,7 @@
     }
   }
   ```
-
+BEFORE WE DO PHASE 2, AND CONNECT FIREBASE LETS JUST GET A WORKING HTML PAGE WITH A BUTTON THAT OPENS A NEW TAB TO THE PERCENTAGES PAGE AND  PUTS A PRETTY CHECKMARK NEXT TO WHAT WAS CLICKED.
 
 ### Phase 2: Main Tracker HTML (Priority: High, Est. 1 hour)
 - Create `index.html` with Firebase SDK imports (v10 compat)
