@@ -104,14 +104,14 @@
         },
         {
           "id": "btn-divdec",
-          "label": "Dividing Decimals",
+          "label": "Dividing DecimalsB",
           "icon": "÷",
           "url": "https://meteorinca.github.io/divdecimals/"
         },
         {
           "id": "btn-longdiv",
           "label": "Long Division",
-          "icon": "⟌",
+          "icon": "÷",
           "url": "https://meteorinca.github.io/longdivision/"
         },
         {
