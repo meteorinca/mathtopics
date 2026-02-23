@@ -4,10 +4,6 @@
 ## What It Does
 Tracks student progress through math exercises using anonymous Firebase UUIDs. Students click buttons → progress auto-logs → you see completion data.
 
-
-## Live Demo
-**[Your GitHub Pages URL here]**
-
 ## Quick Start
 
 1. **Firebase Setup** (5 min)
