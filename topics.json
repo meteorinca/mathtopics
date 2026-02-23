@@ -109,6 +109,12 @@
           "url": "https://meteorinca.github.io/divdecimals/"
         },
         {
+          "id": "btn-longdiv",
+          "label": "Long Division",
+          "icon": "⟌",
+          "url": "https://meteorinca.github.io/longdivision/"
+        },
+        {
           "id": "btn-rounding",
           "label": "Rounding",
           "icon": "≈",
