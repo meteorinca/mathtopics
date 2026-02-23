@@ -58,25 +58,25 @@
           "id": "btn-addfrac",
           "label": "Adding Fractions",
           "icon": "+",
-          "url": "https://meteorinca.github.io/addfractions/"
+          "url": "https://meteorinca.github.io/addfractions/#add"
         },
         {
           "id": "btn-subfrac",
           "label": "Subtracting Fractions",
           "icon": "−",
-          "url": "https://meteorinca.github.io/subfractions/"
+          "url": "https://meteorinca.github.io/addfractions/#subtract"
         },
         {
           "id": "btn-multfrac",
           "label": "Multiplying Fractions",
           "icon": "×",
-          "url": "https://meteorinca.github.io/multfractions/"
+          "url": "https://meteorinca.github.io/addfractions/#multiply"
         },
         {
           "id": "btn-divfrac",
           "label": "Dividing Fractions",
           "icon": "÷",
-          "url": "https://meteorinca.github.io/divfractions/"
+          "url": "https://meteorinca.github.io/addfractions/#divide"
         },
         {
           "id": "btn-improper",
