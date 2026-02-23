@@ -25,6 +25,12 @@
       "category": "numbers",
       "topics": [
         {
+          "id": "btn-racing",
+          "label": "Times Table Racing",
+          "icon": "🏎️",
+          "url": "https://meteorinca.github.io/MathRacingTutorFS/"
+        },
+        {
           "id": "btn-gcf",
           "label": "Greatest Common Factor",
           "icon": "🔢",

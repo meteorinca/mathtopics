@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <style>
         *,
         *::before,
@@ -99,9 +100,12 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle at 30% 20%, var(--bg-gradient-1) 0%, transparent 50%),
+            background:
+                url('assets/math_pattern.svg') repeat,
+                radial-gradient(circle at 30% 20%, var(--bg-gradient-1) 0%, transparent 50%),
                 radial-gradient(circle at 70% 80%, var(--bg-gradient-2) 0%, transparent 50%),
                 radial-gradient(circle at 50% 50%, var(--bg-gradient-3) 0%, transparent 50%);
+            background-size: 100px 100px, 100% 100%, 100% 100%, 100% 100%;
             animation: bgShift 20s ease-in-out infinite alternate;
             z-index: -1;
             transition: background 0.4s ease;
@@ -489,13 +493,26 @@
             --btn-glow: rgba(16, 185, 129, 0.06);
         }
 
-        .cat-decimal .topic-icon {
-            background: rgba(245, 158, 11, 0.1);
-            color: var(--accent-amber);
-        }
-
         .cat-decimal {
             --btn-glow: rgba(245, 158, 11, 0.06);
+        }
+
+        .cat-numbers .topic-icon {
+            background: rgba(20, 184, 166, 0.1);
+            color: var(--accent-teal);
+        }
+
+        .cat-numbers {
+            --btn-glow: rgba(20, 184, 166, 0.06);
+        }
+
+        .cat-logic .topic-icon {
+            background: rgba(236, 72, 153, 0.1);
+            color: var(--accent-pink);
+        }
+
+        .cat-logic {
+            --btn-glow: rgba(236, 72, 153, 0.06);
         }
 
         /* Dark mode: boost icon backgrounds */
@@ -513,6 +530,14 @@
 
         [data-theme="dark"] .cat-decimal .topic-icon {
             background: rgba(245, 158, 11, 0.18);
+        }
+
+        [data-theme="dark"] .cat-numbers .topic-icon {
+            background: rgba(20, 184, 166, 0.18);
+        }
+
+        [data-theme="dark"] .cat-logic .topic-icon {
+            background: rgba(236, 72, 153, 0.18);
         }
 
         /* =============================================
@@ -677,9 +702,8 @@
             'ratio': 'cat-ratio',
             'fraction': 'cat-fraction',
             'decimal': 'cat-decimal',
-            // Add more as needed, e.g.:
-            // 'algebra': 'cat-algebra',
-            // 'geometry': 'cat-geometry',
+            'numbers': 'cat-numbers',
+            'logic': 'cat-logic',
         };
 
         async function loadTopics() {
