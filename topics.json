@@ -21,6 +21,30 @@
       ]
     },
     {
+      "title": "Number Sense",
+      "category": "numbers",
+      "topics": [
+        {
+          "id": "btn-gcf",
+          "label": "Greatest Common Factor",
+          "icon": "🔢",
+          "url": "https://meteorinca.github.io/gcf/"
+        },
+        {
+          "id": "btn-isprime",
+          "label": "Prime Numbers",
+          "icon": "💎",
+          "url": "https://meteorinca.github.io/isprime/"
+        },
+        {
+          "id": "btn-numberline",
+          "label": "Number Lines",
+          "icon": "↔️",
+          "url": "https://meteorinca.github.io/numberline/"
+        }
+      ]
+    },
+    {
       "title": "Fractions",
       "category": "fraction",
       "topics": [
@@ -47,6 +71,12 @@
           "label": "Dividing Fractions",
           "icon": "÷",
           "url": "https://meteorinca.github.io/divfractions/"
+        },
+        {
+          "id": "btn-improper",
+          "label": "Improper Fractions",
+          "icon": "⚖️",
+          "url": "https://meteorinca.github.io/improperfractions/"
         }
       ]
     },
@@ -77,6 +107,30 @@
           "label": "Dividing Decimals",
           "icon": "÷",
           "url": "https://meteorinca.github.io/divdecimals/"
+        },
+        {
+          "id": "btn-rounding",
+          "label": "Rounding",
+          "icon": "≈",
+          "url": "https://meteorinca.github.io/rounding/"
+        }
+      ]
+    },
+    {
+      "title": "Graphs & Logic",
+      "category": "logic",
+      "topics": [
+        {
+          "id": "btn-oop",
+          "label": "Order of Operations",
+          "icon": "📋",
+          "url": "https://meteorinca.github.io/oop/"
+        },
+        {
+          "id": "btn-cartesian",
+          "label": "Cartesian Plane",
+          "icon": "📈",
+          "url": "https://meteorinca.github.io/cartesianFw/"
         }
       ]
     }
