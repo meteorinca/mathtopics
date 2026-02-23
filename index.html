@@ -611,7 +611,7 @@
     </button>
 
     <div class="container">
-        <header class="header">
+        <header class="header" id="siteHeader">
             <h1>📐 Math Topics</h1>
             <p>Click a topic to practice — checkmarks track your progress!</p>
         </header>
@@ -620,114 +620,15 @@
         <div class="progress-container" id="progressContainer">
             <div class="progress-label">
                 <span>Your Progress</span>
-                <span class="count" id="progressCount">0 / 10</span>
+                <span class="count" id="progressCount">0 / 0</span>
             </div>
             <div class="progress-bar-bg">
                 <div class="progress-bar-fill" id="progressFill"></div>
             </div>
         </div>
 
-        <!-- Core Concepts -->
-        <div class="section-title">Core Concepts</div>
-        <div class="topics-grid">
-            <button class="topic-btn cat-percent" id="btn-percent"
-                onclick="trackAndGo('https://meteorinca.github.io/percent/', 'btn-percent')">
-                <div class="topic-icon">%</div>
-                <span class="topic-label">Percentages</span>
-                <div class="check-area">
-                    <div class="check-circle"></div>
-                </div>
-            </button>
-
-            <button class="topic-btn cat-ratio" id="btn-ratios"
-                onclick="trackAndGo('https://meteorinca.github.io/ratios/', 'btn-ratios')">
-                <div class="topic-icon">∶</div>
-                <span class="topic-label">Ratios</span>
-                <div class="check-area">
-                    <div class="check-circle"></div>
-                </div>
-            </button>
-        </div>
-
-        <!-- Fractions -->
-        <div class="section-title">Fractions</div>
-        <div class="topics-grid">
-            <button class="topic-btn cat-fraction" id="btn-addfrac"
-                onclick="trackAndGo('https://meteorinca.github.io/addfractions/', 'btn-addfrac')">
-                <div class="topic-icon">+</div>
-                <span class="topic-label">Adding Fractions</span>
-                <div class="check-area">
-                    <div class="check-circle"></div>
-                </div>
-            </button>
-
-            <button class="topic-btn cat-fraction" id="btn-subfrac"
-                onclick="trackAndGo('https://meteorinca.github.io/subfractions/', 'btn-subfrac')">
-                <div class="topic-icon">−</div>
-                <span class="topic-label">Subtracting Fractions</span>
-                <div class="check-area">
-                    <div class="check-circle"></div>
-                </div>
-            </button>
-
-            <button class="topic-btn cat-fraction" id="btn-multfrac"
-                onclick="trackAndGo('https://meteorinca.github.io/multfractions/', 'btn-multfrac')">
-                <div class="topic-icon">×</div>
-                <span class="topic-label">Multiplying Fractions</span>
-                <div class="check-area">
-                    <div class="check-circle"></div>
-                </div>
-            </button>
-
-            <button class="topic-btn cat-fraction" id="btn-divfrac"
-                onclick="trackAndGo('https://meteorinca.github.io/divfractions/', 'btn-divfrac')">
-                <div class="topic-icon">÷</div>
-                <span class="topic-label">Dividing Fractions</span>
-                <div class="check-area">
-                    <div class="check-circle"></div>
-                </div>
-            </button>
-        </div>
-
-        <!-- Decimals -->
-        <div class="section-title">Decimals</div>
-        <div class="topics-grid">
-            <button class="topic-btn cat-decimal" id="btn-adddec"
-                onclick="trackAndGo('https://meteorinca.github.io/adddecimals/', 'btn-adddec')">
-                <div class="topic-icon">+</div>
-                <span class="topic-label">Adding Decimals</span>
-                <div class="check-area">
-                    <div class="check-circle"></div>
-                </div>
-            </button>
-
-            <button class="topic-btn cat-decimal" id="btn-subdec"
-                onclick="trackAndGo('https://meteorinca.github.io/subdecimals/', 'btn-subdec')">
-                <div class="topic-icon">−</div>
-                <span class="topic-label">Subtracting Decimals</span>
-                <div class="check-area">
-                    <div class="check-circle"></div>
-                </div>
-            </button>
-
-            <button class="topic-btn cat-decimal" id="btn-multdec"
-                onclick="trackAndGo('https://meteorinca.github.io/multdecimals/', 'btn-multdec')">
-                <div class="topic-icon">×</div>
-                <span class="topic-label">Multiplying Decimals</span>
-                <div class="check-area">
-                    <div class="check-circle"></div>
-                </div>
-            </button>
-
-            <button class="topic-btn cat-decimal" id="btn-divdec"
-                onclick="trackAndGo('https://meteorinca.github.io/divdecimals/', 'btn-divdec')">
-                <div class="topic-icon">÷</div>
-                <span class="topic-label">Dividing Decimals</span>
-                <div class="check-area">
-                    <div class="check-circle"></div>
-                </div>
-            </button>
-        </div>
+        <!-- Topics are rendered here dynamically from topics.json -->
+        <div id="topicsContainer"></div>
 
         <button class="reset-btn" id="resetBtn" onclick="resetProgress()">Reset All Progress</button>
 
@@ -737,7 +638,7 @@
     <script>
         const STORAGE_KEY = 'mathtopics_checked';
         const THEME_KEY = 'mathtopics_theme';
-        const TOTAL_TOPICS = 10;
+        let TOTAL_TOPICS = 0; // Computed dynamically from topics.json
 
         // =============================================
         // THEME TOGGLE
@@ -747,7 +648,6 @@
             if (saved === 'dark') {
                 document.documentElement.setAttribute('data-theme', 'dark');
             }
-            // Default is light (no data-theme attribute needed)
         }
 
         function toggleTheme() {
@@ -763,6 +663,87 @@
 
         // Init theme BEFORE page renders (avoid flash)
         initTheme();
+
+        // =============================================
+        // DYNAMIC TOPIC RENDERING FROM topics.json
+        // =============================================
+
+        /**
+         * Maps category names from topics.json to CSS class names.
+         * Add new entries here when you create a new category color.
+         */
+        const CATEGORY_CSS_MAP = {
+            'percent': 'cat-percent',
+            'ratio': 'cat-ratio',
+            'fraction': 'cat-fraction',
+            'decimal': 'cat-decimal',
+            // Add more as needed, e.g.:
+            // 'algebra': 'cat-algebra',
+            // 'geometry': 'cat-geometry',
+        };
+
+        async function loadTopics() {
+            try {
+                const response = await fetch('topics.json');
+                if (!response.ok) throw new Error('Failed to load topics.json');
+                const data = await response.json();
+                renderTopics(data);
+            } catch (err) {
+                console.error('Error loading topics:', err);
+                document.getElementById('topicsContainer').innerHTML =
+                    '<p style="color: var(--text-secondary); text-align: center; padding: 40px;">⚠️ Could not load topics. Make sure <code>topics.json</code> is in the same folder.</p>';
+            }
+        }
+
+        function renderTopics(data) {
+            // Update site header if provided in JSON
+            const header = document.getElementById('siteHeader');
+            if (data.siteTitle) header.querySelector('h1').textContent = data.siteTitle;
+            if (data.siteSubtitle) header.querySelector('p').textContent = data.siteSubtitle;
+
+            const container = document.getElementById('topicsContainer');
+            container.innerHTML = '';
+
+            // Count total topics across all sections
+            TOTAL_TOPICS = data.sections.reduce((sum, section) => sum + section.topics.length, 0);
+
+            data.sections.forEach((section, sIdx) => {
+                // Section title
+                const titleDiv = document.createElement('div');
+                titleDiv.className = 'section-title';
+                if (sIdx === 0) titleDiv.style.marginTop = '0';
+                titleDiv.textContent = section.title;
+                container.appendChild(titleDiv);
+
+                // Topics grid
+                const grid = document.createElement('div');
+                grid.className = 'topics-grid';
+
+                section.topics.forEach(topic => {
+                    const catClass = CATEGORY_CSS_MAP[section.category] || 'cat-percent';
+
+                    const btn = document.createElement('button');
+                    btn.className = `topic-btn ${catClass}`;
+                    btn.id = topic.id;
+                    btn.addEventListener('click', () => trackAndGo(topic.url, topic.id));
+
+                    btn.innerHTML = `
+                        <div class="topic-icon">${topic.icon}</div>
+                        <span class="topic-label">${topic.label}</span>
+                        <div class="check-area">
+                            <div class="check-circle"></div>
+                        </div>
+                    `;
+
+                    grid.appendChild(btn);
+                });
+
+                container.appendChild(grid);
+            });
+
+            // Now that DOM is built, load saved progress & update bar
+            loadProgress();
+        }
 
         // =============================================
         // PROGRESS TRACKING
@@ -808,7 +789,7 @@
 
         function updateProgressBar() {
             const count = getCheckedCount();
-            const pct = (count / TOTAL_TOPICS) * 100;
+            const pct = TOTAL_TOPICS > 0 ? (count / TOTAL_TOPICS) * 100 : 0;
             document.getElementById('progressFill').style.width = pct + '%';
             document.getElementById('progressCount').textContent = count + ' / ' + TOTAL_TOPICS;
         }
@@ -848,8 +829,10 @@
             setTimeout(() => container.remove(), 5000);
         }
 
-        // Init progress
-        loadProgress();
+        // =============================================
+        // INIT — Load topics from JSON, then progress
+        // =============================================
+        loadTopics();
     </script>
 
 </body>

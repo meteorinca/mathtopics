@@ -1,0 +1,84 @@
+{
+  "siteTitle": "📐 Math Topics",
+  "siteSubtitle": "Click a topic to practice — checkmarks track your progress!",
+  "sections": [
+    {
+      "title": "Core Concepts",
+      "category": "percent",
+      "topics": [
+        {
+          "id": "btn-percent",
+          "label": "Percentages",
+          "icon": "%",
+          "url": "https://meteorinca.github.io/percent/"
+        },
+        {
+          "id": "btn-ratios",
+          "label": "Ratios",
+          "icon": "∶",
+          "url": "https://meteorinca.github.io/ratios/"
+        }
+      ]
+    },
+    {
+      "title": "Fractions",
+      "category": "fraction",
+      "topics": [
+        {
+          "id": "btn-addfrac",
+          "label": "Adding Fractions",
+          "icon": "+",
+          "url": "https://meteorinca.github.io/addfractions/"
+        },
+        {
+          "id": "btn-subfrac",
+          "label": "Subtracting Fractions",
+          "icon": "−",
+          "url": "https://meteorinca.github.io/subfractions/"
+        },
+        {
+          "id": "btn-multfrac",
+          "label": "Multiplying Fractions",
+          "icon": "×",
+          "url": "https://meteorinca.github.io/multfractions/"
+        },
+        {
+          "id": "btn-divfrac",
+          "label": "Dividing Fractions",
+          "icon": "÷",
+          "url": "https://meteorinca.github.io/divfractions/"
+        }
+      ]
+    },
+    {
+      "title": "Decimals",
+      "category": "decimal",
+      "topics": [
+        {
+          "id": "btn-adddec",
+          "label": "Adding Decimals",
+          "icon": "+",
+          "url": "https://meteorinca.github.io/adddecimals/"
+        },
+        {
+          "id": "btn-subdec",
+          "label": "Subtracting Decimals",
+          "icon": "−",
+          "url": "https://meteorinca.github.io/subdecimals/"
+        },
+        {
+          "id": "btn-multdec",
+          "label": "Multiplying Decimals",
+          "icon": "×",
+          "url": "https://meteorinca.github.io/multdecimals/"
+        },
+        {
+          "id": "btn-divdec",
+          "label": "Dividing Decimals",
+          "icon": "÷",
+          "url": "https://meteorinca.github.io/divdecimals/"
+        }
+      ]
+    }
+  ]
+}
