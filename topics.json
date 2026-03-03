@@ -31,7 +31,7 @@
           "url": "https://meteorinca.github.io/MathRacingTutorFS/"
         },
         {
-          "id": "btn-racing",
+          "id": "btn-times",
           "label": "Times Tables Practice",
           "icon": "✖️",
           "url": "https://meteorinca.github.io/timestables/"
