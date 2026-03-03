@@ -34,7 +34,7 @@
           "id": "btn-racing",
           "label": "Times Tables Practice",
           "icon": "✖️",
-          "url": "https://meteorinca.github.io/timestable/"
+          "url": "https://meteorinca.github.io/timestable/#sort"
         },
         {
           "id": "btn-gcf",
