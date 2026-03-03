@@ -31,6 +31,12 @@
           "url": "https://meteorinca.github.io/MathRacingTutorFS/"
         },
         {
+          "id": "btn-racing",
+          "label": "Times Tables Practice",
+          "icon": "✖️",
+          "url": "https://meteorinca.github.io/timestable/"
+        },
+        {
           "id": "btn-gcf",
           "label": "Greatest Common Factor",
           "icon": "🔢",
@@ -54,6 +60,12 @@
       "title": "Fractions",
       "category": "fraction",
       "topics": [
+          {
+          "id": "btn-fracbasics",
+          "label": "Fractions Basics",
+          "icon": "♡",
+          "url": "https://meteorinca.github.io/fractoolkit/"
+        },
         {
           "id": "btn-addfrac",
           "label": "Adding Fractions",
