@@ -106,25 +106,25 @@
           "id": "btn-adddec",
           "label": "Adding Decimals",
           "icon": "+",
-          "url": "https://meteorinca.github.io/adddecimals/"
+          "url": "https://meteorinca.github.io/decimaltoolkit/"
         },
         {
           "id": "btn-subdec",
           "label": "Subtracting Decimals",
           "icon": "−",
-          "url": "https://meteorinca.github.io/subdecimals/"
+          "url": "https://meteorinca.github.io/decimaltoolkit/"
         },
         {
           "id": "btn-multdec",
           "label": "Multiplying Decimals",
           "icon": "×",
-          "url": "https://meteorinca.github.io/multdecimals/"
+          "url": "https://meteorinca.github.io/decimaltoolkit/"
         },
         {
           "id": "btn-divdec",
           "label": "Dividing DecimalsB",
           "icon": "÷",
-          "url": "https://meteorinca.github.io/divdecimals/"
+          "url": "https://meteorinca.github.io/decimaltoolkit/"
         },
         {
           "id": "btn-longdiv",
