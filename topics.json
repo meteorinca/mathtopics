@@ -145,6 +145,12 @@
       "category": "logic",
       "topics": [
         {
+          "id": "btn-area",
+          "label": "Area, Perimeter, Time, & Measurement",
+          "icon": "🟥",
+          "url": "https://meteorinca.github.io/areatoolkit/"
+        },
+        {
           "id": "btn-oop",
           "label": "Order of Operations",
           "icon": "📋",
