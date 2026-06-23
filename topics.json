@@ -17,7 +17,13 @@
           "label": "Ratios",
           "icon": "∶",
           "url": "https://meteorinca.github.io/ratios/"
-        }
+        },
+        {
+          "id": "btn-wordprobs",
+          "label": "Word Problems",
+          "icon": "📝",
+          "url": "https://meteorinca.github.io/wordprobs/"
+    }
       ]
     },
     {
