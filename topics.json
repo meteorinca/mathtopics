@@ -11,7 +11,7 @@
           "label": "Word Problems",
           "icon": "📝",
           "url": "https://meteorinca.github.io/wordprobs/"
-    }
+        }
       ]
     },
     {
@@ -60,7 +60,7 @@
       "title": "Fractions",
       "category": "fraction",
       "topics": [
-          {
+        {
           "id": "btn-fracbasics",
           "label": "Fractions Basics",
           "icon": "♡",
@@ -122,7 +122,7 @@
         },
         {
           "id": "btn-divdec",
-          "label": "Dividing DecimalsB",
+          "label": "Dividing Decimals",
           "icon": "÷",
           "url": "https://meteorinca.github.io/decimaltoolkit/"
         },
@@ -169,7 +169,6 @@
       "category": "practical",
       "topics": [
         {
-            {
           "id": "btn-percent",
           "label": "Percentages",
           "icon": "%",
@@ -181,6 +180,7 @@
           "icon": "∶",
           "url": "https://meteorinca.github.io/ratios/"
         }
+      ]
+    }
   ]
 }
-    }
