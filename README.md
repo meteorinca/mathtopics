@@ -6,7 +6,7 @@ Tracks student progress through math exercises using anonymous Firebase UUIDs. S
 
 
 ## Live Demo
-**[Your GitHub Pages URL here]**
+**https://meteorinca.github.io/mathtopics/**
 
 ## Quick Start
 
