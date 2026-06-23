@@ -46,7 +46,13 @@
           "id": "btn-gcf",
           "label": "Greatest Common Factor",
           "icon": "🔢",
-          "url": "https://meteorinca.github.io/gcf/"
+          "url": "https://meteorinca.github.io/fractoolkit/#gcf"
+        },
+        {
+          "id": "btn-lcm",
+          "label": "Lowest Common Multiple",
+          "icon": "🔢",
+          "url": "https://meteorinca.github.io/fractoolkit/#lcm"
         },
         {
           "id": "btn-isprime",
