@@ -7,18 +7,6 @@
       "category": "percent",
       "topics": [
         {
-          "id": "btn-percent",
-          "label": "Percentages",
-          "icon": "%",
-          "url": "https://meteorinca.github.io/percent/"
-        },
-        {
-          "id": "btn-ratios",
-          "label": "Ratios",
-          "icon": "∶",
-          "url": "https://meteorinca.github.io/ratios/"
-        },
-        {
           "id": "btn-wordprobs",
           "label": "Word Problems",
           "icon": "📝",
@@ -175,6 +163,24 @@
           "url": "https://meteorinca.github.io/cartesianFw/"
         }
       ]
-    }
+    },
+    {
+      "title": "Practical",
+      "category": "practical",
+      "topics": [
+        {
+            {
+          "id": "btn-percent",
+          "label": "Percentages",
+          "icon": "%",
+          "url": "https://meteorinca.github.io/percent/"
+        },
+        {
+          "id": "btn-ratios",
+          "label": "Ratios",
+          "icon": "∶",
+          "url": "https://meteorinca.github.io/ratios/"
+        }
   ]
 }
+    }
